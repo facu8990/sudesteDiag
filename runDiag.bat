@@ -2,5 +2,11 @@
 
 echo "Recompiling components information..."
 
-cd components
-powershell getComponents.ps1
+mkdir .\inventory
+
+powershell .\getComponents.ps1
+
+echo "Installing Viewer..."
+
+call .\node\npm i
+call .\node\npm run live

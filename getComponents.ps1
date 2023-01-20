@@ -1,6 +1,6 @@
-New-Item 'inventory' -ItemType Directory
-wmic baseboard list brief   /format:csv | convertfrom-csv | ConvertTo-Json | Set-Content .\inventory\motherboard.json;
-wmic cpu list brief  /format:csv | convertfrom-csv | ConvertTo-Json | Set-Content .\inventory\cpu.json;
+wmic os get /format:csv | convertfrom-csv | ConvertTo-Json | Set-Content .\inventory\os.json;
+wmic baseboard list brief /format:csv | convertfrom-csv | ConvertTo-Json | Set-Content .\inventory\motherboard.json;
+wmic cpu list brief /format:csv | convertfrom-csv | ConvertTo-Json | Set-Content .\inventory\cpu.json;
 wmic memorychip list /format:csv | convertfrom-csv | ConvertTo-Json | Set-Content .\inventory\memory.json;
 wmic diskdrive list brief /format:csv | convertfrom-csv | ConvertTo-Json | Set-Content .\inventory\disks.json;
 wmic sounddev list brief /format:csv | convertfrom-csv | ConvertTo-Json | Set-Content .\inventory\sound.json;
