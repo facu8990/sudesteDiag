@@ -1,0 +1,182 @@
+[
+    {
+        "Node":  "MASTER-RACE",
+        "AdapterType":  "",
+        "DeviceID":  "0",
+        "MACAddress":  "",
+        "Name":  "Microsoft Kernel Debug Network Adapter",
+        "NetworkAddresses":  "",
+        "ServiceName":  "kdnic",
+        "Speed":  null
+    },
+    {
+        "Node":  "MASTER-RACE",
+        "AdapterType":  "Ethernet 802.3",
+        "DeviceID":  "1",
+        "MACAddress":  "60:45:CB:9B:1A:1F",
+        "Name":  "Intel(R) Ethernet Connection (2) I219-V",
+        "NetworkAddresses":  "",
+        "ServiceName":  "e1i65x64",
+        "Speed":  "1000000000"
+    },
+    {
+        "Node":  "MASTER-RACE",
+        "AdapterType":  "Ethernet 802.3",
+        "DeviceID":  "2",
+        "MACAddress":  "D8:FB:5E:C8:8F:15",
+        "Name":  "Bluetooth Device (Personal Area Network)",
+        "NetworkAddresses":  "",
+        "ServiceName":  "BthPan",
+        "Speed":  "3000000"
+    },
+    {
+        "Node":  "MASTER-RACE",
+        "AdapterType":  "",
+        "DeviceID":  "3",
+        "MACAddress":  "",
+        "Name":  "WAN Miniport (SSTP)",
+        "NetworkAddresses":  "",
+        "ServiceName":  "RasSstp",
+        "Speed":  null
+    },
+    {
+        "Node":  "MASTER-RACE",
+        "AdapterType":  "",
+        "DeviceID":  "4",
+        "MACAddress":  "",
+        "Name":  "WAN Miniport (IKEv2)",
+        "NetworkAddresses":  "",
+        "ServiceName":  "RasAgileVpn",
+        "Speed":  null
+    },
+    {
+        "Node":  "MASTER-RACE",
+        "AdapterType":  "",
+        "DeviceID":  "5",
+        "MACAddress":  "",
+        "Name":  "WAN Miniport (L2TP)",
+        "NetworkAddresses":  "",
+        "ServiceName":  "Rasl2tp",
+        "Speed":  null
+    },
+    {
+        "Node":  "MASTER-RACE",
+        "AdapterType":  "",
+        "DeviceID":  "6",
+        "MACAddress":  "",
+        "Name":  "WAN Miniport (PPTP)",
+        "NetworkAddresses":  "",
+        "ServiceName":  "PptpMiniport",
+        "Speed":  null
+    },
+    {
+        "Node":  "MASTER-RACE",
+        "AdapterType":  "",
+        "DeviceID":  "7",
+        "MACAddress":  "",
+        "Name":  "WAN Miniport (PPPOE)",
+        "NetworkAddresses":  "",
+        "ServiceName":  "RasPppoe",
+        "Speed":  null
+    },
+    {
+        "Node":  "MASTER-RACE",
+        "AdapterType":  "Ethernet 802.3",
+        "DeviceID":  "8",
+        "MACAddress":  "A6:B0:20:52:41:53",
+        "Name":  "WAN Miniport (IP)",
+        "NetworkAddresses":  "",
+        "ServiceName":  "NdisWan",
+        "Speed":  null
+    },
+    {
+        "Node":  "MASTER-RACE",
+        "AdapterType":  "Ethernet 802.3",
+        "DeviceID":  "9",
+        "MACAddress":  "A8:16:20:52:41:53",
+        "Name":  "WAN Miniport (IPv6)",
+        "NetworkAddresses":  "",
+        "ServiceName":  "NdisWan",
+        "Speed":  null
+    },
+    {
+        "Node":  "MASTER-RACE",
+        "AdapterType":  "Ethernet 802.3",
+        "DeviceID":  "10",
+        "MACAddress":  "AA:74:20:52:41:53",
+        "Name":  "WAN Miniport (Network Monitor)",
+        "NetworkAddresses":  "",
+        "ServiceName":  "NdisWan",
+        "Speed":  null
+    },
+    {
+        "Node":  "MASTER-RACE",
+        "AdapterType":  "",
+        "DeviceID":  "11",
+        "MACAddress":  "",
+        "Name":  "PANGP Virtual Ethernet Adapter Secure",
+        "NetworkAddresses":  "",
+        "ServiceName":  "PanGpd",
+        "Speed":  null
+    },
+    {
+        "Node":  "MASTER-RACE",
+        "AdapterType":  "Ethernet 802.3",
+        "DeviceID":  "12",
+        "MACAddress":  "D8:FB:5E:C8:8F:14",
+        "Name":  "Qualcomm Atheros QCA61x4A Wireless Network Adapter",
+        "NetworkAddresses":  "",
+        "ServiceName":  "Qcamain10x64",
+        "Speed":  "9223372036854775807"
+    },
+    {
+        "Node":  "MASTER-RACE",
+        "AdapterType":  "Ethernet 802.3",
+        "DeviceID":  "13",
+        "MACAddress":  "DA:FB:5E:C8:8F:14",
+        "Name":  "Microsoft Wi-Fi Direct Virtual Adapter",
+        "NetworkAddresses":  "",
+        "ServiceName":  "vwifimp",
+        "Speed":  "9223372036854775807"
+    },
+    {
+        "Node":  "MASTER-RACE",
+        "AdapterType":  "Ethernet 802.3",
+        "DeviceID":  "14",
+        "MACAddress":  "EA:FB:5E:C8:8F:14",
+        "Name":  "Microsoft Wi-Fi Direct Virtual Adapter #2",
+        "NetworkAddresses":  "",
+        "ServiceName":  "vwifimp",
+        "Speed":  "9223372036854775807"
+    },
+    {
+        "Node":  "MASTER-RACE",
+        "AdapterType":  "",
+        "DeviceID":  "15",
+        "MACAddress":  "",
+        "Name":  "UsbNcm Host Device",
+        "NetworkAddresses":  "",
+        "ServiceName":  "",
+        "Speed":  null
+    },
+    {
+        "Node":  "MASTER-RACE",
+        "AdapterType":  "Ethernet 802.3",
+        "DeviceID":  "16",
+        "MACAddress":  "",
+        "Name":  "Hyper-V Virtual Switch Extension Adapter",
+        "NetworkAddresses":  "",
+        "ServiceName":  "VMSMP",
+        "Speed":  null
+    },
+    {
+        "Node":  "MASTER-RACE",
+        "AdapterType":  "Ethernet 802.3",
+        "DeviceID":  "17",
+        "MACAddress":  "00:15:5D:E6:DF:70",
+        "Name":  "Hyper-V Virtual Ethernet Adapter",
+        "NetworkAddresses":  "",
+        "ServiceName":  "VMSNPXYMP",
+        "Speed":  "10000000000"
+    }
+]

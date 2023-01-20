@@ -1,0 +1,34 @@
+[
+    {
+        "Node":  "MASTER-RACE",
+        "Caption":  "TOSHIBA MK6475GSX",
+        "DeviceID":  "\\\\.\\PHYSICALDRIVE1",
+        "Model":  "TOSHIBA MK6475GSX",
+        "Partitions":  "1",
+        "Size":  "640132416000"
+    },
+    {
+        "Node":  "MASTER-RACE",
+        "Caption":  "Samsung SSD 960 EVO 250GB",
+        "DeviceID":  "\\\\.\\PHYSICALDRIVE2",
+        "Model":  "Samsung SSD 960 EVO 250GB",
+        "Partitions":  "2",
+        "Size":  "250056737280"
+    },
+    {
+        "Node":  "MASTER-RACE",
+        "Caption":  "SanDisk Ultra USB 3.0 USB Device",
+        "DeviceID":  "\\\\.\\PHYSICALDRIVE3",
+        "Model":  "SanDisk Ultra USB 3.0 USB Device",
+        "Partitions":  "2",
+        "Size":  "61525094400"
+    },
+    {
+        "Node":  "MASTER-RACE",
+        "Caption":  "ST9500420AS",
+        "DeviceID":  "\\\\.\\PHYSICALDRIVE0",
+        "Model":  "ST9500420AS",
+        "Partitions":  "2",
+        "Size":  "500105249280"
+    }
+]

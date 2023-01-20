@@ -1,0 +1,23 @@
+[
+    {
+        "Node":  "MASTER-RACE",
+        "Manufacturer":  "Microsoft",
+        "Name":  "High Definition Audio Device",
+        "Status":  "OK",
+        "StatusInfo":  "3"
+    },
+    {
+        "Node":  "MASTER-RACE",
+        "Manufacturer":  "NVIDIA",
+        "Name":  "NVIDIA High Definition Audio",
+        "Status":  "OK",
+        "StatusInfo":  "3"
+    },
+    {
+        "Node":  "MASTER-RACE",
+        "Manufacturer":  "Intel(R) Corporation",
+        "Name":  "Intel(R) Display Audio",
+        "Status":  "OK",
+        "StatusInfo":  "3"
+    }
+]
