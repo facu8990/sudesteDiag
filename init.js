@@ -4,6 +4,17 @@ console.log(inventory)
 const main = document.createElement('main');
 main.className += "container"
 
+document.getElementById('pcName').append(inventory.os.CSName)
+const os = document.createElement('hgroup')
+os.innerHTML = `
+        <h1>${inventory.os.Caption}</h1>
+        <small>${inventory.os.Version}</small>
+        <small>${inventory.os.OSArchitecture}</small>
+        <small>${inventory.os.BuildNumber}</small>
+`
+document.getElementById('os').appendChild(os)
+document.getElementById('os').appendChild(document.createElement('br'))
+
 const cpu = document.createElement('article')
 cpu.innerHTML = `
     <header>
