@@ -1,4 +1,4 @@
-components/*.json
+inventory
 
 # Logs
 logs
@@ -24,3 +24,5 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+node

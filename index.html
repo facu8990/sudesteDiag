@@ -6,12 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
     <title id="title"></title>
+    <style>
+      .hero {
+        background-color: #394046;
+        background-image: url("bg.jpg");
+        background-position: center;
+        background-size: cover;
+      }
+    </style>
 </head>
     <body>
         <div class="hero" data-theme="dark">
             <nav class="container-fluid">
               <ul>
-                <li><a href="./" class="contrast" onclick="event.preventDefault()"><strong>Sudestec</strong></a></li>
+                <li>
+                  <img src="./icon-low.png" alt="sudestecIcon">
+                </li>
               </ul>
               <ul>
                 <li>
@@ -34,47 +44,11 @@
             <header class="container">
               <hgroup>
                 <h1>SudesteDiag</h1>
-                <h2>System inventory done simple.</h2>
+                <small>System inventory done simple.</small>
               </hgroup>
+              <br>
             </header>
-          </div>
-        <main class="container">
-            <section id="cpu">
-            </section>
-            <section>
-                <h2>Disk/s</h2>
-                <div id="disks" class="grid">
-                </div>
-            </section>
-            <section>
-                <h2>GPU</h2>
-                <div id="gpu" class="grid">
-                </div>
-            </section>
-            <section id="ramSection">
-                <h2>RAM</h2>
-                <div id="ram" class="grid">
-                </div>
-            </section>
-            <section id="motherboard">
-            </section>
-            <section id="soundSection">
-                <h2>Sound</h2>
-                <div id="sound">
-                </div>
-            </section>
-            <section id="networkSection">
-                <h2>Network</h2>
-                <div id="network">
-                </div>
-            </section>
-            <section id="programsSection" class="grid">
-                <h2>Programs</h2>
-                    <table id="programs" role="grid">
-                        
-                    </table>
-            </section>
-        </main>
-        <script type="module" src="./components/populateData.js"></script>
+        </div>
+        <script type="module" src="./init.js"></script>
     </body>
 </html>

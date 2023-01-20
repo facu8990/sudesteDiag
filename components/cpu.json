@@ -1,9 +1,0 @@
-{
-    "Node":  "MASTER-RACE",
-    "Caption":  "Intel64 Family 6 Model 158 Stepping 9",
-    "DeviceID":  "CPU0",
-    "Manufacturer":  "GenuineIntel",
-    "MaxClockSpeed":  "3501",
-    "Name":  "Intel(R) Core(TM) i5-7600 CPU @ 3.50GHz",
-    "SocketDesignation":  "LGA1151"
-}
