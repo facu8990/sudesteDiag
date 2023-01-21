@@ -14,3 +14,7 @@ jobs:
         type: 'zip'
         filename: 'release.zip'
         exclusions: '*.git*'
+    - uses: Klemensas/action-autotag@stable
+    - name: Tag Release
+      with:
+        GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
