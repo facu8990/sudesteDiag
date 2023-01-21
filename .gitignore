@@ -1,5 +1,7 @@
 inventory
 .github
+.github/*
+
 # Logs
 logs
 *.log
