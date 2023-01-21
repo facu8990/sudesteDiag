@@ -1,9 +1,12 @@
 name: Create Release
+
 on:
-  push:
+  create:
     tags:
     - '*'
+
 jobs:
+
   Archive:
     runs-on: ubuntu-latest
     steps:
@@ -13,6 +16,7 @@ jobs:
         type: 'zip'
         filename: 'release.zip'
         exclusions: '*.git* /github'
+
   Release:
     runs-on: ubuntu-latest
     permissions:
