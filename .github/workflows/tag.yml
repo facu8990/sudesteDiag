@@ -26,5 +26,4 @@ jobs:
     - uses: ncipollo/release-action@v1
       with:
         artifacts: "release.zip"
-        tag: "${{github.ref_name}}"
     needs: Archive
