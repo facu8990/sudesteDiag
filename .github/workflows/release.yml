@@ -2,7 +2,7 @@ name: Create Release
 on:
   push:
     tags:
-    - '**'
+    - '*'
 jobs:
   Archive:
     runs-on: ubuntu-latest
@@ -13,7 +13,7 @@ jobs:
       with:
         type: 'zip'
         filename: 'release.zip'
-        exclusions: '*.git* /github .editorconfig'
+        exclusions: '*.git* /github'
   Release:
     runs-on: ubuntu-latest
     permissions:
