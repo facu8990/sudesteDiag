@@ -1,9 +1,0 @@
-name: Create Release
-
-on: 
-  push:
-    tags:
-    - '*'
-
-jobs:
-
