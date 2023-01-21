@@ -7,23 +7,3 @@ on:
 
 jobs:
 
-  Archive:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@master
-    - uses: thedoctor0/zip-release@0.7.0
-      with:
-        type: 'zip'
-        filename: 'release.zip'
-        exclusions: '*.git* /github'
-
-  Release:
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
-    steps:
-    - uses: actions/checkout@v2
-    - uses: ncipollo/release-action@v1
-      with:
-        artifacts: "release.zip"
-    needs: Archive
