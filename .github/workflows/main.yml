@@ -23,15 +23,8 @@ jobs:
         type: 'zip'
         filename: 'release.zip'
         exclusions: '*.git* /github'
-    needs: Tag
-  Release:
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
-    steps:
     - uses: actions/checkout@v2
     - uses: ncipollo/release-action@v1
       with:
         artifacts: "release.zip"
         tag: ${{github.ref_name}}
-    needs: [Tag,Archive]
