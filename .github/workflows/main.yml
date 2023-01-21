@@ -6,18 +6,13 @@ on:
     - master
 
 jobs:
-  Tag:
+  start:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
     - uses: Klemensas/action-autotag@stable
       with:
         GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
-
-  Archive:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@master
     - uses: thedoctor0/zip-release@0.7.0
       with:
         type: 'zip'
@@ -27,4 +22,3 @@ jobs:
       with:
         artifacts: "release.zip"
         tag: ${{github.ref_name}}
-    needs: Tag
