@@ -14,7 +14,11 @@ jobs:
         type: 'zip'
         filename: 'release.zip'
         exclusions: '*.git*'
+  tag:
+    runs-on: ubuntu-latest
+    steps:
     - uses: Klemensas/action-autotag@stable
     - name: Tag Release
       with:
         GITHUB_TOKEN: "${{ secrets.TOKEN }}"
+    needs: build
