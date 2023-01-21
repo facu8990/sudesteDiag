@@ -4,9 +4,10 @@ echo "Recompiling components information..."
 
 mkdir .\inventory
 
-powershell .\getComponents.ps1
+powershell -ExecutionPolicy Unrestricted .\getComponents.ps1
 
 echo "Starting Viewer..."
 
+call .\node\nodevars.bat
 call .\node\npm i
 call .\node\npm run live
