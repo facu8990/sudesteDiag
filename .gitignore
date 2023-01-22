@@ -1,6 +1,7 @@
 inventory
 .github
 *.zip
+!/node/node_modules
 # Logs
 logs
 *.log
