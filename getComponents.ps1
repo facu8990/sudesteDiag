@@ -1,9 +1,9 @@
-wmic os get /format:csv | convertfrom-csv | ConvertTo-Json | Set-Content .\inventory\os.json;
-wmic baseboard list brief /format:csv | convertfrom-csv | ConvertTo-Json | Set-Content .\inventory\motherboard.json;
-wmic cpu list brief /format:csv | convertfrom-csv | ConvertTo-Json | Set-Content .\inventory\cpu.json;
-wmic memorychip list /format:csv | convertfrom-csv | ConvertTo-Json | Set-Content .\inventory\memory.json;
-wmic diskdrive list brief /format:csv | convertfrom-csv | ConvertTo-Json | Set-Content .\inventory\disks.json;
-wmic sounddev list brief /format:csv | convertfrom-csv | ConvertTo-Json | Set-Content .\inventory\sound.json;
-wmic product list brief /format:csv | convertfrom-csv | ConvertTo-Json | Set-Content .\inventory\programs.json;
-wmic path win32_VideoController get /format:csv | convertfrom-csv | ConvertTo-Json | Set-Content .\inventory\gpu.json;
-wmic nic list brief /format:csv | convertfrom-csv | ConvertTo-Json | Set-Content .\inventory\nic.json;
+Get-CimInstance CIM_OperatingSystem | ConvertTo-csv | convertfrom-csv | ConvertTo-json | Set-Content .\inventory\os.json
+Get-CimInstance CIM_Card | ConvertTo-csv | convertfrom-csv | ConvertTo-json | Set-Content .\inventory\motherboard.json
+Get-CimInstance CIM_Processor | ConvertTo-csv | convertfrom-csv | ConvertTo-json | Set-Content .\inventory\cpu.json
+Get-CimInstance CIM_PhysicalMemory | ConvertTo-csv | convertfrom-csv | ConvertTo-json | Set-Content .\inventory\memory.json
+Get-CimInstance CIM_DiskDrive | ConvertTo-csv | convertfrom-csv | ConvertTo-Json | Set-Content .\inventory\disks.json
+Get-CimInstance Win32_SoundDevice | ConvertTo-csv | convertfrom-csv | ConvertTo-json | Set-Content .\inventory\sound.json
+Get-CimInstance CIM_Product | ConvertTo-csv | convertfrom-csv | ConvertTo-json | Set-Content .\inventory\programs.json
+Get-CimInstance CIM_VideoController | ConvertTo-csv | convertfrom-csv | ConvertTo-json | Set-Content .\inventory\gpu.json
+Get-CimInstance CIM_NetworkAdapter | ConvertTo-csv | convertfrom-csv | ConvertTo-json | Set-Content .\inventory\nic.json

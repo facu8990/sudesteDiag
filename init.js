@@ -11,6 +11,7 @@ os.innerHTML = `
         <small>${inventory.os.Version}</small>
         <small>${inventory.os.OSArchitecture}</small>
         <small>${inventory.os.BuildNumber}</small>
+        <small>${inventory.os.SerialNumber}</small>
 `
 document.getElementById('os').appendChild(os)
 document.getElementById('os').appendChild(document.createElement('br'))
@@ -26,7 +27,9 @@ cpu.innerHTML = `
     <ul>
         <li>Family: ${inventory.cpu.Caption}</li>
         <li>Brand: ${inventory.cpu.Manufacturer}</li>
-        <li>Speed: ${inventory.cpu.MaxClockSpeed} Mhz.</li>
+        <li>Speed: ${(inventory.cpu.MaxClockSpeed/1000).toFixed(2)} Ghz.</li>
+        <li>Cores: ${inventory.cpu.NumberOfCores}</li>
+        <li>Threads: ${inventory.cpu.ThreadCount}</li>
         <li>Socket: ${inventory.cpu.SocketDesignation}</li>
     </ul>
 `;
@@ -55,6 +58,8 @@ inventory.disks.forEach(function (disk) {
     <ul>
         <li>Size: ${(disk.Size/1073741824).toFixed(2)} GB</li>
         <li>Partitions: ${disk.Partitions}</li>
+        <li>Firmware: ${disk.FirmwareRevision}</li>
+        <li>Serial: ${disk.SerialNumber.trim()}</li>
     </ul>
     `
     diskList.appendChild(diskItem);
@@ -114,7 +119,8 @@ inventory.memory.forEach(function (ram) {
     </header>
     <ul>
         <li>Size: ${((ram.Capacity/1073741824).toFixed(2))} GB</li>
-        <li>Speed: ${ram.Speed}</li>
+        <li>Speed: ${ram.Speed} Mhz.</li>
+        <li>Voltage: ${ram.ConfiguredVoltage/1000}v</li>
     </ul>
     `
     ramList.appendChild(ramItem);
@@ -133,6 +139,7 @@ motherboard.innerHTML = `
     <ul>
         <li>Brand: ${inventory.motherboard.Manufacturer}</li>
         <li>Serial: ${inventory.motherboard.SerialNumber}</li>
+        <li>Version: ${inventory.motherboard.Version}</li>
     </ul>
 `;
 main.appendChild(motherboard);
@@ -194,7 +201,7 @@ const programsList = document.createElement('tbody');
 inventory.programs.forEach(function (programs) {
     const programsItem = document.createElement('tr');
     programsItem.innerHTML = `
-        <td scope="col">${programs.Name}</td>
+        <td scope="col">${programs.Caption}</td>
         <td scope="col">${programs.Vendor}</td>
         <td scope="col">${programs.Version}</td>
     `
