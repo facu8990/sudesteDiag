@@ -8,5 +8,4 @@ import nic from './inventory/nic.json';
 import programs from './inventory/programs.json';
 import sound from './inventory/sound.json';
 
-
 export default { cpu, os, disks, gpu, memory, motherboard, nic, programs, sound };
