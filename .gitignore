@@ -1,7 +1,6 @@
 inventory
 .github
 *.zip
-!/node/node_modules
 # Logs
 logs
 *.log
@@ -11,7 +10,7 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
+/node_modules
 dist
 dist-ssr
 *.local
