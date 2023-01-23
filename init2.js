@@ -6,31 +6,31 @@ main.className += "container"
 document.getElementById('pcName').append(inventory.OS.CSName)
 const os = document.createElement('hgroup')
 os.innerHTML = `
-<h1>${inventory.OS.Caption}</h1>
-<small>${inventory.OS.Version}</small>
-<small>${inventory.OS.OSArchitecture}</small>
-<small>${inventory.OS.BuildNumber}</small>
-<small>${inventory.OS.SerialNumber}</small>
+    <h1>${inventory.OS.Caption}</h1>
+    <small>${inventory.OS.Version}</small>
+    <small>${inventory.OS.OSArchitecture}</small>
+    <small>${inventory.OS.BuildNumber}</small>
+    <small>${inventory.OS.SerialNumber}</small>
 `
 document.getElementById('os').appendChild(os)
 document.getElementById('os').appendChild(document.createElement('br'))
 
 const cpu = document.createElement('article')
 cpu.innerHTML = `
-<header>
-<hgroup>
-<h2>CPU</h2>
-<p>${inventory.CPU.Name}</p>
-</hgroup>
-</header>
-<ul>
-<li>Family: ${inventory.CPU.Caption}</li>
-<li>Brand: ${inventory.CPU.Manufacturer}</li>
-<li>Speed: ${(inventory.CPU.MaxClockSpeed/1000).toFixed(2)} Ghz.</li>
-<li>Cores: ${inventory.CPU.NumberOfCores}</li>
-<li>Threads: ${inventory.CPU.ThreadCount}</li>
-<li>Socket: ${inventory.CPU.SocketDesignation}</li>
-</ul>
+    <header>
+        <hgroup>
+            <h2>CPU</h2>
+            <p>${inventory.CPU.Name}</p>
+        </hgroup>
+    </header>
+    <ul>
+        <li>Family: ${inventory.CPU.Caption}</li>
+        <li>Brand: ${inventory.CPU.Manufacturer}</li>
+        <li>Speed: ${(inventory.CPU.MaxClockSpeed/1000).toFixed(2)} Ghz.</li>
+        <li>Cores: ${inventory.CPU.NumberOfCores}</li>
+        <li>Threads: ${inventory.CPU.ThreadCount}</li>
+        <li>Socket: ${inventory.CPU.SocketDesignation}</li>
+    </ul>
 `;
 main.appendChild(cpu);
 
@@ -55,13 +55,18 @@ const singleComponent = (component) => {
     return article;
 };
 
+const appendMultiple = (component) => {
+    console.log({ title: component[0], details: component[1]});
+
+};
+
 const appendSection = (section, input) => {
     Object.entries(input)
     .forEach(component => {
         if (component[1].length === undefined) {
             section.appendChild(singleComponent(component));
         } else {
-            console.log({ title: component[0], details: component[1]});
+            appendMultiple(section);
         };
     });
 };

@@ -3,7 +3,7 @@ Get-CimInstance CIM_OperatingSystem | ConvertTo-csv | convertfrom-csv | ConvertT
 Write-Output "{}" >> .\inventory\motherboard.json
 Get-CimInstance CIM_Card | ConvertTo-csv | convertfrom-csv | ConvertTo-json | Set-Content .\inventory\motherboard.json
 Write-Output "{}" >> .\inventory\cpu.json
-Get-CimInstance CIM_Processor -Property description,deviceid,MaxClockSpeed,L2CacheSize,L3CacheSize,NumberOfCores,ThreadCount | ConvertTo-csv | convertfrom-csv | ConvertTo-json | Set-Content .\inventory\cpu.json
+Get-CimInstance CIM_Processor | ConvertTo-csv | convertfrom-csv | ConvertTo-json | Set-Content .\inventory\cpu.json
 Write-Output "{}" >> .\inventory\memory.json
 Get-CimInstance CIM_PhysicalMemory | ConvertTo-csv | convertfrom-csv | ConvertTo-json | Set-Content .\inventory\memory.json
 Write-Output "{}" >> .\inventory\disks.json

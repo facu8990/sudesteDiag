@@ -4,14 +4,15 @@ console.log(inventory)
 const main = document.createElement('main');
 main.className += "container"
 
-document.getElementById('pcName').append(inventory.os.CSName)
+document.getElementById('title').append(inventory.OS.CSName)
+document.getElementById('pcName').append(inventory.OS.CSName)
 const os = document.createElement('hgroup')
 os.innerHTML = `
-        <h1>${inventory.os.Caption}</h1>
-        <small>${inventory.os.Version}</small>
-        <small>${inventory.os.OSArchitecture}</small>
-        <small>${inventory.os.BuildNumber}</small>
-        <small>${inventory.os.SerialNumber}</small>
+        <h1>${inventory.OS.Caption}</h1>
+        <small>${inventory.OS.Version}</small>
+        <small>${inventory.OS.OSArchitecture}</small>
+        <small>${inventory.OS.BuildNumber}</small>
+        <small>${inventory.OS.SerialNumber}</small>
 `
 document.getElementById('os').appendChild(os)
 document.getElementById('os').appendChild(document.createElement('br'))
@@ -21,16 +22,16 @@ cpu.innerHTML = `
     <header>
         <hgroup>
             <h2>CPU</h2>
-            <p>${inventory.cpu.Name}</p>
+            <p>${inventory.CPU.Name}</p>
         </hgroup>
     </header>
     <ul>
-        <li>Family: ${inventory.cpu.Caption}</li>
-        <li>Brand: ${inventory.cpu.Manufacturer}</li>
-        <li>Speed: ${(inventory.cpu.MaxClockSpeed/1000).toFixed(2)} Ghz.</li>
-        <li>Cores: ${inventory.cpu.NumberOfCores}</li>
-        <li>Threads: ${inventory.cpu.ThreadCount}</li>
-        <li>Socket: ${inventory.cpu.SocketDesignation}</li>
+        <li>Family: ${inventory.CPU.Caption}</li>
+        <li>Brand: ${inventory.CPU.Manufacturer}</li>
+        <li>Speed: ${(inventory.CPU.MaxClockSpeed/1000).toFixed(2)} Ghz.</li>
+        <li>Cores: ${inventory.CPU.NumberOfCores}</li>
+        <li>Threads: ${inventory.CPU.ThreadCount}</li>
+        <li>Socket: ${inventory.CPU.SocketDesignation}</li>
     </ul>
 `;
 main.appendChild(cpu);
