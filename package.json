@@ -1,15 +1,31 @@
 {
   "name": "sudestediag",
-  "private": true,
-  "version": "v1.0.1",
-  "type": "module",
+  "productName": "sudesteDiag",
+  "version": "1.0.0",
+  "description": "Self System Inventory.",
+  "main": "src/index.js",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview",
-    "live": "vite build && vite preview"
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "publish": "electron-forge publish",
+    "lint": "echo \"No linting configured\""
+  },
+  "keywords": [],
+  "author": {
+    "name": "facu8990",
+    "email": "facu.vdp@gmail.com"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "electron-squirrel-startup": "^1.0.0"
   },
   "devDependencies": {
-    "vite": "^4.0.0"
+    "@electron-forge/cli": "^6.0.4",
+    "@electron-forge/maker-deb": "^6.0.4",
+    "@electron-forge/maker-rpm": "^6.0.4",
+    "@electron-forge/maker-squirrel": "^6.0.4",
+    "@electron-forge/maker-zip": "^6.0.4",
+    "electron": "22.1.0"
   }
 }
