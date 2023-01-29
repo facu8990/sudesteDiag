@@ -1,15 +1,13 @@
 const list = [
-    {title: 'OS', command:'CIM_OperatingSystem | ConvertTo-csv | convertfrom-csv | ConvertTo-json'},
-    {title: 'Motherboard',command:'Get-CimInstance CIM_Card | ConvertTo-csv | convertfrom-csv | ConvertTo-json'},
-    {title: 'CPU',command:'Get-CimInstance CIM_Processor | ConvertTo-csv | convertfrom-csv | ConvertTo-json'},
-    {title: 'RAM',command:'Get-CimInstance CIM_PhysicalMemory | ConvertTo-csv | convertfrom-csv | ConvertTo-json'},
-    {title: 'Disk/s',command:'Get-CimInstance CIM_DiskDrive | ConvertTo-csv | convertfrom-csv | ConvertTo-Json'},
-    {title: 'Sound',command:'Get-CimInstance Win32_SoundDevice | ConvertTo-csv | convertfrom-csv | ConvertTo-json'},
-    {title: 'Programs',command:'Get-CimInstance CIM_Product | ConvertTo-csv | convertfrom-csv | ConvertTo-json'},
-    {title: 'GPU',command:'Get-CimInstance CIM_VideoController | ConvertTo-csv | convertfrom-csv | ConvertTo-json'},
-    {title: 'OS',command:'Get-CimInstance CIM_NetworkAdapter | ConvertTo-csv | convertfrom-csv | ConvertTo-json'},
-]
+    { title: 'OS', command: 'CIM_OperatingSystem', filter: ['Caption', 'InstallDate', 'CSName', 'Version', 'BuildNumber', 'OSArchitecture', 'SerialNumber'] },
+    { title: 'Motherboard', command: 'CIM_Card', filter: ['Manufacturer', 'SerialNumber', 'Version', 'Product'] },
+    { title: 'CPU', command: 'CIM_Processor', filter: ['DeviceID', 'Description', 'Name', 'MaxClockSpeed', 'Manufacturer', 'NumberOfCores', 'ProcessorId', 'SocketDesignation', 'ThreadCount'] },
+    { title: 'RAM', command: 'CIM_PhysicalMemory', filter: ['DeviceLocator', 'PartNumber', 'SerialNumber', 'Capacity', 'ConfiguredClockSpeed', 'ConfiguredVoltage', 'Manufacturer'] },
+    { title: 'GPU', command: 'CIM_VideoController', filter: ['DeviceID', 'Name', 'AdapterCompatibility', 'VideoProcessor', 'AdapterRAM', 'DriverVersion', 'AdapterRAM'] },
+    { title: 'Disk/s', command: 'CIM_DiskDrive', filter: [''] },
+    { title: 'Sound', command: 'Win32_SoundDevice', filter: [''] },
+    { title: 'Network', command: 'CIM_NetworkAdapter', filter: [''] },
+    { title: 'Programs', command: 'CIM_Product', filter: [''] },
+];
 
-module.exports.list = {
-    list: list,
-}
+module.exports.list = list;
