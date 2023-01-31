@@ -29,7 +29,6 @@ const renderComponent = (component, parent) => {
             component.details = list;
         };
         delete component.command;
-        console.log(component);
         loading.replaceWith(loadArticle(component.title,component.details));
     })
 
