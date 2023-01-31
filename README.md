@@ -1,13 +1,13 @@
 # sudesteDiag - Roadmap
 
-### Implement New Project Management Model
+### Implement New Project Management Model (Needs update)
 
 > This milestone will be done when 
 * The new PM model is stable and ratified by all the sudesteDiag-related milestones
 
 This will allow us to then assemble our first Organization Roadmap.
 
-We want to have this done before the Q4 Quarterly Meeting so that we can use this new PM model during that meeting.
+Development migrated to ElectronJS framework.
 
 🚀 &nbsp;**OPEN** &nbsp;&nbsp;📉 &nbsp;&nbsp;**0 / 6** goals completed **(50%)** &nbsp;&nbsp;📅 &nbsp;&nbsp;**Dom 22 Jan 2023**
 
