@@ -8,7 +8,8 @@ const renderComponent = (component, parent) => {
 
     exec(`powershell Get-CimInstance "${component.command} | ConvertTo-csv | convertfrom-csv | ConvertTo-json"`, (err, stdout, stderr) => {
         if (err) {
-            console.log(stderr)
+            component.details = {Error: stderr};
+            loading.replaceWith(loadArticle(component.title,component.details));
             return;
         };
         const output = JSON.parse(stdout);
