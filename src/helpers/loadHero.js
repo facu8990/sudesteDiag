@@ -38,7 +38,7 @@ const loadHero = (data) => {
     header.innerHTML = `
                         <hgroup>
                             <h1>SudesteDiag</h1>
-                            <h2>A simple and concise System Inventory report generator</h2>
+                            <small>A simple and concise System Inventory report generator</small>
                         </hgroup>
                     `;
     const p = document.createElement('p');
