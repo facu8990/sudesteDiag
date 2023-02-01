@@ -1,3 +1,5 @@
+
+
 const loadHero = (data) => {
     const hero = document.createElement('div');
     const nav = document.createElement('nav');
@@ -24,7 +26,7 @@ const loadHero = (data) => {
         a.append(item.title);
         li.appendChild(a);
         links.appendChild(li);
-    })
+    });
     ul.appendChild(li);
     li.appendChild(details);
     details.appendChild(summary);
@@ -41,7 +43,7 @@ const loadHero = (data) => {
                     `;
     const p = document.createElement('p');
     const startButton = document.createElement('a');
-    startButton.id = 'start'
+    startButton.id = 'start';
     startButton.role = 'button';
     startButton.href = '#'
     startButton.onclick = () => startInventory(list);
