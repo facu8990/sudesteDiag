@@ -9,24 +9,27 @@ const loadArticle = (title, content) => {
     if (content.length === undefined) {
         const ul = document.createElement('ul');
         Object.entries(content).forEach(component => {
-            if (component[1] !== null) {
-                if (component[1].length > 0) {
-                    const li = document.createElement('li');
-                    li.append(`${component[0]}: ${component[1]}`);
-                    ul.appendChild(li);
-                }
-            }
+            const li = document.createElement('li');
+            li.append(`${component[0]}: ${component[1]}`);
+            ul.appendChild(li);
         });
         article.appendChild(ul);
     } else if (content.length < 5) {
         const grid = document.createElement('div');
         grid.className = 'grid'
-        content.forEach(component => {
+        content.forEach((component, index) => {
             const gridElement = document.createElement('div');
-            const p = document.createElement('p');
-            p.append(component)
-            gridElement.appendChild(p);
-            grid.appendChild(gridElement);
+            const h3 = document.createElement('h3');
+            h3.append(`# ${index+1}`)
+            const ul = document.createElement('ul');
+            Object.entries(component).forEach(component => {
+                const li = document.createElement('li');
+                li.append(`${component[0]}: ${component[1]}`);
+                ul.appendChild(li);
+            });
+            gridElement.appendChild(h3);
+            gridElement.appendChild(ul);
+            grid.appendChild(gridElement);            
         });
         article.appendChild(grid);
 
@@ -41,16 +44,16 @@ const loadArticle = (title, content) => {
         table.appendChild(thead);
         table.appendChild(tbody);
         figure.appendChild(table);
-        
-        
+
+
         Object.keys(content[0]).forEach(title => {
             const th = document.createElement('th');
             th.scope = 'col';
             th.append(title);
             trHead.appendChild(th);
         })
-        
-        
+
+
         content.forEach(component => {
             const trBody = document.createElement('tr');
             Object.entries(component).forEach(row => {

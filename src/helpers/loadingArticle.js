@@ -6,8 +6,8 @@ const loadingArticle = (title) => {
     article.id = title;
     h2.append(title);
     p.ariaBusy = true;
-    article.appendChild(header);
     header.appendChild(h2);
+    article.appendChild(header);
     article.appendChild(p);
     return article;
 };

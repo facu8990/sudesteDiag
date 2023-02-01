@@ -1,3 +1,5 @@
+
+
 const loadHero = (data) => {
     const hero = document.createElement('div');
     const nav = document.createElement('nav');
@@ -24,7 +26,7 @@ const loadHero = (data) => {
         a.append(item.title);
         li.appendChild(a);
         links.appendChild(li);
-    })
+    });
     ul.appendChild(li);
     li.appendChild(details);
     details.appendChild(summary);
@@ -36,12 +38,12 @@ const loadHero = (data) => {
     header.innerHTML = `
                         <hgroup>
                             <h1>SudesteDiag</h1>
-                            <h2>A simple and concise System Inventory report generator</h2>
+                            <small>A simple and concise System Inventory report generator</small>
                         </hgroup>
                     `;
     const p = document.createElement('p');
     const startButton = document.createElement('a');
-    startButton.id = 'start'
+    startButton.id = 'start';
     startButton.role = 'button';
     startButton.href = '#'
     startButton.onclick = () => startInventory(list);
