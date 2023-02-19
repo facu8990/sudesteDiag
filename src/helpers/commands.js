@@ -5,7 +5,7 @@ const list = [
     { title: 'RAM', command: 'CIM_PhysicalMemory', filter: ['DeviceLocator', 'PartNumber', 'SerialNumber', 'Capacity', 'ConfiguredClockSpeed', 'ConfiguredVoltage', 'Manufacturer'] },
     { title: 'GPU', command: 'CIM_VideoController', filter: ['DeviceID', 'Name', 'AdapterCompatibility', 'VideoProcessor', 'AdapterRAM', 'DriverVersion', 'AdapterRAM'] },
     { title: 'Disk/s', command: 'CIM_DiskDrive', filter: ['DeviceID', 'Caption','MediaType','Partitions','SerialNumber','Size' , 'FirmwareRevision' ] },
-    { title: 'Sound', command: 'Win32_SoundDevice', filter: ['DeviceID', 'Caption' ,'Manufacturer'] },
+    { title: 'Sound', command: 'Win32_SoundDevice', filter: ['Caption' ,'Manufacturer'] },
     { title: 'Network', command: 'CIM_NetworkAdapter', filter: ['DeviceID', 'Description', 'Manufacturer', 'ServiceName', 'Speed'] },
     { title: 'Programs', command: 'CIM_Product', filter: ['Caption', 'Vendor', 'Version'] },
 ];

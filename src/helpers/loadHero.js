@@ -1,6 +1,15 @@
 
 
-const loadHero = (data) => {
+const loadHero = (data,action,where) => {
+
+    const startInventory = (commands) => {
+        document.getElementById('start').onclick = null;
+        commands.forEach(item => {
+            action(item,where);
+        });
+    
+    };
+
     const hero = document.createElement('div');
     const nav = document.createElement('nav');
     const brand = document.createElement('ul');
@@ -38,7 +47,7 @@ const loadHero = (data) => {
     header.innerHTML = `
                         <hgroup>
                             <h1>SudesteDiag</h1>
-                            <small>A simple and concise System Inventory report generator</small>
+                            <small>A simple and concise System Inventory</small>
                         </hgroup>
                     `;
     const p = document.createElement('p');
@@ -46,7 +55,7 @@ const loadHero = (data) => {
     startButton.id = 'start';
     startButton.role = 'button';
     startButton.href = '#'
-    startButton.onclick = () => startInventory(list);
+    startButton.onclick = () => startInventory(data);
     startButton.append('Start');
     p.appendChild(startButton);
     header.appendChild(p);

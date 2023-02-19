@@ -8,23 +8,24 @@ if (require('electron-squirrel-startup')) {
 
 const createWindow = () => {
   // Create the browser window.
+  
   const mainWindow = new BrowserWindow({
+    frame: true,
+    show: true,
     width: 405,
     height: 720,
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
       nodeIntegration: true,
-      contextIsolation: false,
-      enableRemoteModule: true,
+      contextIsolation: true,
       devTools: false,
     },
   });
-
-  // and load the index.html of the app.
-  mainWindow.loadFile(path.join(__dirname, 'index.html'));
-
-  // Open the DevTools.
-  mainWindow.webContents.openDevTools();
+  mainWindow.loadFile(path.join(__dirname, 'loading.html'));
+  
+  mainWindow.once('ready-to-show', () => {
+    setTimeout(() => mainWindow.loadFile(path.join(__dirname, 'index.html')),4000) ;
+  })
 };
 
 // This method will be called when Electron has finished
