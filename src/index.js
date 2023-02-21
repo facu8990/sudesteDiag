@@ -18,9 +18,10 @@ const createWindow = () => {
       preload: path.join(__dirname, 'preload.js'),
       nodeIntegration: true,
       contextIsolation: true,
-      devTools: false,
+      devTools: true,
     },
   });
+  
   mainWindow.loadFile(path.join(__dirname, 'loading.html'));
   
   mainWindow.once('ready-to-show', () => {

@@ -18,16 +18,17 @@
         width: 50vmin;
       }
       #c {
-        animation: cAnimation 4s ease-in-out;
+        animation: cAnimation 3s ease-out;
         animation-fill-mode: forwards;
       }
       #s {
-        animation: sAnimation 4s ease-in-out;
+        animation: sAnimation 3s ease-out;
         animation-fill-mode: forwards;
       }
       body {
         background-color: #000;
-        animation: background 4s ease-in-out;
+        animation: background 1s ease-out;
+        animation-delay: 3s;
         animation-fill-mode: forwards;
       }
 
@@ -35,11 +36,11 @@
         0% {
           fill: transparent;
         }
-        20% {
+        25% {
           fill: transparent;
           stroke-dashoffset: 0;
         }
-        40% {
+        50% {
           fill: transparent;
           stroke-dashoffset: 0;
           stroke-width: 0;
@@ -54,11 +55,11 @@
         0% {
           fill: transparent;
         }
-        20% {
+        25% {
           fill: transparent;
           stroke-dashoffset: 0;
         }
-        60% {
+        75% {
           fill: transparent;
           stroke-dashoffset: -2837.920166015625;
           stroke-width: 0;
@@ -71,7 +72,7 @@
         }
       }
       @keyframes background {
-        80% {
+        0% {
           background-color: #000;
         }
         100% {
