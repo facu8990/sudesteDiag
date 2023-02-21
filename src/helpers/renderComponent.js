@@ -9,6 +9,7 @@ const renderComponent = (component, parent) => {
     startButton.removeAttribute('onclick','href');
     startButton.innerHTML = "";;
     startButton.ariaBusy = true;
+    
     startButton.addEventListener(
         'change', () => {
             counter++;
