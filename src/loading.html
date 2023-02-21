@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loading</title>
+
+    <style>
+      html, body {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      
+      #icon {
+        width: 50vmin;
+      }
+      #c {
+        animation: cAnimation 3s ease-out;
+        animation-fill-mode: forwards;
+      }
+      #s {
+        animation: sAnimation 3s ease-out;
+        animation-fill-mode: forwards;
+      }
+      body {
+        background-color: #000;
+        animation: background 1s ease-out;
+        animation-delay: 3s;
+        animation-fill-mode: forwards;
+      }
+
+      @keyframes sAnimation {
+        0% {
+          fill: transparent;
+        }
+        25% {
+          fill: transparent;
+          stroke-dashoffset: 0;
+        }
+        50% {
+          fill: transparent;
+          stroke-dashoffset: 0;
+          stroke-width: 0;
+        }
+        100% {
+          stroke-width: 0;
+          stroke-dashoffset: 0;
+          fill: #fff;
+        }
+      }
+      @keyframes cAnimation {
+        0% {
+          fill: transparent;
+        }
+        25% {
+          fill: transparent;
+          stroke-dashoffset: 0;
+        }
+        75% {
+          fill: transparent;
+          stroke-dashoffset: -2837.920166015625;
+          stroke-width: 0;
+        }
+        100% {
+          stroke-width: 0;
+          stroke-dashoffset: -2837.920166015625;
+          stroke-dashoffset: 0;
+          fill: #fff;
+        }
+      }
+      @keyframes background {
+        0% {
+          background-color: #000;
+        }
+        100% {
+          background-color: #7d6bf2;
+        }
+      }
+    </style>
+  </head>
+  <body>
+      <svg id="icon" viewBox="0 0 684 684">
+        <circle id="circle" cx="342" cy="342" r="342" />
+        <path
+          id="c"
+          d="M567.5,295.9C546.2,191.8,454,113.5,343.6,113.5c-126.2,0-228.5,102.3-228.5,228.5
+                s102.3,228.5,228.5,228.5c110.6,0,202.8-78.5,224-182.8l0,0h92.7l0,0c-22.2,155-155.5,274.2-316.7,274.2
+                C166.9,661.9,23.7,518.7,23.7,342s143.3-319.9,320-319.9c161.2,0,294.5,119.2,316.7,274.2h-92.8"
+          style="
+            stroke-dasharray: 3447.793945;
+            stroke-dashoffset: 3447.793945;
+            stroke: #ffffff;
+            fill: #ffffff;
+          "
+        />
+        <path
+          id="s"
+          d="M557.9,319.1H218.4
+            c10.8-58.5,62-102.8,123.6-102.8c53.3,0,98.8,33.2,117.1,80l0,0h95.2h0c-21-98-108.1-171.4-212.3-171.4
+            c-119.9,0-217.1,97.2-217.1,217.1c0,7.7,0.4,15.3,1.2,22.9l0,0h339.5l0,0c-10.8,58.5-62,102.8-123.6,102.8
+            c-53.3,0-98.8-33.2-117.1-80l0,0h-95.1l0,0c21,98,108.1,171.4,212.3,171.4c119.9,0,217.1-97.2,217.1-217.1c0-7.8-0.4-15.6-1.2-23.2"
+          style="
+            stroke-dasharray: 2837.920166015625;
+            stroke-dashoffset: 2837.920166015625;
+            stroke: #ffffff;
+            fill: #ffffff;
+          "
+        />
+      </svg>
+  </body>
+</html>

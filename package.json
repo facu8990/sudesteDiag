@@ -1,7 +1,7 @@
 {
   "name": "sudestediag",
   "productName": "sudesteDiag",
-  "version": "1.0.4",
+  "version": "0.1.2",
   "description": "Self System Inventory.",
   "main": "src/index.js",
   "scripts": {
