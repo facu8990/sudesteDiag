@@ -3,30 +3,30 @@ const path = require('path');
 
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
 if (require('electron-squirrel-startup')) {
-  app.quit();
+	app.quit();
 }
 
 const createWindow = () => {
-  // Create the browser window.
+	// Create the browser window.
   
-  const mainWindow = new BrowserWindow({
-    frame: true,
-    show: true,
-    width: 405,
-    height: 720,
-    webPreferences: {
-      preload: path.join(__dirname, 'preload.js'),
-      nodeIntegration: true,
-      contextIsolation: true,
-      devTools: false,
-    },
-  });
+	const mainWindow = new BrowserWindow({
+		frame: true,
+		show: true,
+		width: 405,
+		height: 720,
+		webPreferences: {
+			preload: path.join(__dirname, 'preload.js'),
+			nodeIntegration: true,
+			contextIsolation: true,
+			devTools: false,
+		},
+	});
   
-  mainWindow.loadFile(path.join(__dirname, 'loading.html'));
+	mainWindow.loadFile(path.join(__dirname, 'loading.html'));
   
-  mainWindow.once('ready-to-show', () => {
-    setTimeout(() => mainWindow.loadFile(path.join(__dirname, 'index.html')),4000) ;
-  })
+	mainWindow.once('ready-to-show', () => {
+		setTimeout(() => mainWindow.loadFile(path.join(__dirname, 'index.html')),4000) ;
+	});
 };
 
 // This method will be called when Electron has finished
@@ -38,17 +38,17 @@ app.on('ready', createWindow);
 // for applications and their menu bar to stay active until the user quits
 // explicitly with Cmd + Q.
 app.on('window-all-closed', () => {
-  if (process.platform !== 'darwin') {
-    app.quit();
-  }
+	if (process.platform !== 'darwin') {
+		app.quit();
+	}
 });
 
 app.on('activate', () => {
-  // On OS X it's common to re-create a window in the app when the
-  // dock icon is clicked and there are no other windows open.
-  if (BrowserWindow.getAllWindows().length === 0) {
-    createWindow();
-  }
+	// On OS X it's common to re-create a window in the app when the
+	// dock icon is clicked and there are no other windows open.
+	if (BrowserWindow.getAllWindows().length === 0) {
+		createWindow();
+	}
 });
 
 // In this file you can include the rest of your app's specific main process

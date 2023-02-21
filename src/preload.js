@@ -8,7 +8,7 @@ const { renderComponent } = require('./helpers/renderComponent');
 const { list } = require('./helpers/commands');
 
 contextBridge.exposeInMainWorld('functions', {
-    list: list,
-    loadHero: loadHero,
-    renderComponent: renderComponent,
+	list: list,
+	loadHero: loadHero,
+	renderComponent: renderComponent,
 });
