@@ -10,15 +10,12 @@ const createWindow = () => {
 	// Create the browser window.
   
 	const mainWindow = new BrowserWindow({
-		frame: true,
-		show: true,
 		width: 405,
 		height: 720,
 		webPreferences: {
 			preload: path.join(__dirname, 'preload.js'),
 			nodeIntegration: true,
-			contextIsolation: true,
-			devTools: false,
+			devTools: true,
 		},
 	});
   
@@ -27,6 +24,8 @@ const createWindow = () => {
 	mainWindow.once('ready-to-show', () => {
 		setTimeout(() => mainWindow.loadFile(path.join(__dirname, 'index.html')),4000) ;
 	});
+
+
 };
 
 // This method will be called when Electron has finished

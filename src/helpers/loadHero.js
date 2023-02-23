@@ -1,8 +1,4 @@
-
-
-const loadHero = (data,action,where) => {
-
-    
+const loadHero = (data,action,where,saveHTML) => {
 	const hero = document.createElement('div');
 	const nav = document.createElement('nav');
 	const brand = document.createElement('ul');
@@ -55,10 +51,12 @@ const loadHero = (data,action,where) => {
 	hero.appendChild(nav);
 	hero.appendChild(header);
 
-
 	const startInventory = (commands) => {
+		startButton.removeAttribute('onclick','href');
+		startButton.innerHTML = '';
+		startButton.ariaBusy = true;	
 		commands.forEach(item => {
-			action(item,where);
+			action(item,where,saveHTML);
 		});
         
 	};

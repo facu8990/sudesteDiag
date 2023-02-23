@@ -2,27 +2,24 @@ const { loadArticle } = require('./loadArticle');
 const { loadingArticle } = require('./loadingArticle');
 const { exec } = require('child_process');
 
-const renderComponent = (component, parent) => {
+const renderComponent = (component, parent, saveHTML) => {
 	const startButton = document.getElementById('start');
 	const changeButton = new Event('change');
 	let counter = 0;
-	startButton.removeAttribute('onclick','href');
-	startButton.innerHTML = '';
-	startButton.ariaBusy = true;
 
 	startButton.addEventListener(
 		'change', () => {
 			counter++;
 			if (counter === 9) {
 				const saveButton = document.createElement('a');
-				saveButton.id = 'start';
+
+				saveButton.id = 'save';
 				saveButton.role = 'button';
 				saveButton.href = '#';
-				saveButton.onclick = () => console.log('Que no me lo creo tio');
+				saveButton.onclick = () => saveHTML(parent);
 				saveButton.append('Save');
 				startButton.replaceWith(saveButton);
-			}},
-		false
+			}}
 	);
 
 	const loading = loadingArticle(component.title);
